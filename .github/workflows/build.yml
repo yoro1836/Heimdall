@@ -12,6 +12,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
+        sudo apt upgrade
         sudo apt -y install build-essential cmake zlib1g-dev libgl1-mesa-dev libgl1-mesa-glx libusb-1.0-0-dev qt5-default
     - name: Build
       run: |
@@ -38,7 +39,6 @@ jobs:
     - name: Build
       shell: msys2 {0}
       run: |
-        sudo apt install mingw-w64-x86_64*
         export PATH="/mingw64/bin:$PATH"
         mkdir build
         cd build
