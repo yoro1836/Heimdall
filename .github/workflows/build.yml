@@ -38,6 +38,7 @@ jobs:
     - name: Build
       shell: msys2 {0}
       run: |
+        sudo apt install mingw-w64-x86_64*
         export PATH="/mingw64/bin:$PATH"
         mkdir build
         cd build
